@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(255, 255, 255);
+    color: rgb(93, 93, 93);
+}
+a, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style-type: none;
+}
+#header {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 140px;
+    background-color: rgba(114, 114, 114, 0.8);
+}
+#footer {
+    position: relative; /* absolute로 하면 스크롤 내릴때 위의 컨텐츠와 겹쳐버림 */ 
+    bottom: 0;
+    height: 200px;
+    border-top: 1000px;
+    width: auto;
+}
+/* 로고 영역 */
+#logo {
+    position: absolute; /* fixed로 하면 스크롤 내릴때 고정 되어버림 */ 
+    float: left;
+    margin-top: 50px;
+}
+#logo h1 {
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* 회원 메뉴바 */
+.menu-top > ul {
+    display: flex;
+    float: right;
+    justify-content: center;
+    text-align: center;
+    padding-right: 200px;
+}
+.menu-top li {
+    margin: 0 1px;
+    padding: 10px;
+}
+
+/* 페이지 메뉴바 */
+.menu-nav > ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.menu-nav li {
+    padding: 10px;
+}
+.menu-nav a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 20px;
+}
+
+/* 서브 메뉴바 */
+.menu-sub {
+    display: none;
+    position: absolute;
+}
+.menu-nav > ul > li > ul > li {
+    display: inline-block;
+}
+.menu-nav ul li:hover .menu-sub {
+    display: block;
+}
+.menu-sub li:hover {
+    background-color: rgba(255, 165, 0, 0.4);
+}

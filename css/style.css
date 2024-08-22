@@ -1,0 +1,284 @@
+
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(255, 255, 255);
+    color: rgb(93, 93, 93);
+}
+a, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style-type: none;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 120px;
+    background-color: rgba(31, 31, 31, 0.8);
+}
+.bg_container {
+    background: url("../images/mainslide01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    z-index: 10;
+}
+#logo {
+    background: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute; /* fixed로 하면 스크롤 내릴때 고정 되어버림 */ 
+    float: left;
+    margin-top: 50px;
+}
+
+/* 회원 메뉴바 */
+.menu-top > ul {
+    display: flex;
+    float: right;
+    justify-content: center;
+    text-align: center;
+    padding-right: 200px;
+}
+.menu-top li {
+    margin: 0 1px;
+    padding: 10px;
+}
+.menu-top li a {color: white;}
+
+/* 페이지 메뉴바 */
+.menu-nav > ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.menu-nav li {
+    margin-top: 10px;
+    padding: 10px;
+}
+.menu-nav a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 20px;
+    color: white;
+}
+
+/* 서브 메뉴바 */
+.menu-sub {
+    display: none;
+    position: absolute;
+}
+.menu-nav > ul > li > ul > li {
+    display: inline-block;
+    margin-top: 29px;
+}
+.menu-nav ul li:hover .menu-sub {
+    display: block;
+}
+.menu-sub li:hover {
+    background-color: rgba(255, 165, 0, 0.6);
+}
+
+
+/* 다시 찾는 인기 여행지 */
+.fovorites {
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+.fovorites > h1 {
+    padding: 30px 0px;
+}
+.travel {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 20px;
+}
+.travel > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.travel_h {
+    position: relative;
+    width: 280px;
+    height: auto;
+    padding: 10px;
+}
+.travel_p {
+    position: relative;
+    text-align: center;
+    width: 280px;
+    height: auto;
+    padding: 10px;
+}
+.travel_img {
+    position: relative;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+}
+
+/* 상담, 공지 정보 */
+#notify {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 30px 0px;
+}
+
+.sd_bg {
+    background: url('../images/bg_app.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+.sd_bg > ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+.sd_bg > ul > li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(128, 128, 128);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 20px 40px;
+}
+
+.notice > ul {
+    color: black;
+}
+.notice > ul > li {
+    margin-left: 20px;
+    list-style-type: circle;
+    font-size: 0.9rem;
+}
+
+/* footer 좌우 정렬, 메뉴바, 정보 */
+#footer {
+    padding-top: 20px;
+    position: relative; /* absolute로 하면 스크롤 내릴때 위의 컨텐츠와 겹쳐버림 */ 
+    bottom: 0;
+    min-height: 150px;
+    width: auto;
+    background-color: rgb(182, 182, 182);
+}
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.left-area {
+    display: flex;
+    flex-direction: column;
+}
+.menu-footer ul {
+    display: flex;
+    flex-direction: row;
+}
+.menu-footer li {
+    padding: 2px 10px;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    color:black;
+}
+.footer-info p {
+    padding: 0px 10px;
+    min-height: 0px;
+    font-size: 0.9rem;
+}
+.sns-area {
+    display: flex;
+    align-items: center;
+}
+.sns-area ul {
+    display: flex;
+    flex-direction: row;
+}
+.sns-area a {
+    text-indent: -9999px;
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* 
+    회원가입 영역
+    일부 css는 위쪽에 스타일과 공용으로 사용
+*/
+.signin-img {
+    position: relative;
+    top: -300px;
+    /* height: 350px; */
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* 회원 가입 폼 */
+.signin-form {
+    display: block;
+    margin-left: 40px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.input-form {
+    margin-top: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid gray;
+    text-align: left;
+}
+.input-form > li {
+    min-height: 60px;
+    margin-top: 10px;
+}
+
+#email_front, #email_rear
+    {height: 45px; width: 160px; font-size: 1rem;}
+#email_domain {height: 45px; width: 200px; font-size: 1rem;}
+#user, #pwd, #pwd-check, #contacts
+    {height: 45px; width: 700px; font-size: 1rem;}
+#male, #female, #agree
+    {width: 30px; font-size: 1rem;}
+#qna 
+    {height: 200px; width: 700px;}
+
+#left-align {
+    position: relative;
+    left: 200px;
+}
+
+#submit {
+    position: relative;
+    margin-top: 15px;
+    background-color: rgb(27, 39, 77);
+    border: 1px solid rgb(27, 39, 77);
+    height: 50px;
+    width: 150px;
+    font-size: 1.1rem;
+    color: white;
+}
+

@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(255, 255, 255);
+    color: rgb(93, 93, 93);
+}
+a, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style-type: none;
+}
+#header {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 140px;
+    background-color: rgba(114, 114, 114, 0.8);
+}
+#footer {
+    position: relative; /* absolute로 하면 스크롤 내릴때 위의 컨텐츠와 겹쳐버림 */ 
+    bottom: 0;
+    height: 200px;
+    border-top: 1000px;
+    width: auto;
+}
+/* 로고 영역 */
+#logo {
+    position: absolute; /* fixed로 하면 스크롤 내릴때 고정 되어버림 */ 
+    float: left;
+    margin-top: 50px;
+}
+#logo h1 {
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* 회원 메뉴바 */
+.menu-top > ul {
+    display: flex;
+    float: right;
+    justify-content: center;
+    text-align: center;
+    padding-right: 200px;
+}
+.menu-top li {
+    margin: 0 1px;
+    padding: 10px;
+}
+
+/* 페이지 메뉴바 */
+.menu-nav > ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.menu-nav li {
+    padding: 10px;
+}
+.menu-nav a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 20px;
+}
+
+/* 서브 메뉴바 */
+.menu-sub {
+    display: none;
+    position: absolute;
+}
+.menu-nav > ul > li > ul > li {
+    display: inline-block;
+}
+.menu-nav ul li:hover .menu-sub {
+    display: block;
+}
+.menu-sub li:hover {
+    background-color: rgba(255, 165, 0, 0.4);
+}
+
+
+/* 상담, 공지 영역 */
+.notify {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.counselor {
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: url('/Users/paul_jeoung/Desktop/exam/img/bg_app.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: auto;
+}
+.notice {
+    display: flex;
+    flex: 2;
+}
+.notice h2 {
+    text-indent: -20px;
+    margin-bottom: 10px;
+}
+.notice li {
+    list-style-type: disc;
+}
+
+
+/* footer 좌우 정렬, 메뉴바, 정보 */
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.left-area {
+    display: flex;
+    flex-direction: column;
+}
+.menu-footer ul {
+    display: flex;
+    flex-direction: row;
+}
+.menu-footer li {
+    padding: 2px 10px;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+.footer-info p {
+    padding: 0px 10px;
+    min-height: 0px;
+    font-size: 0.9rem;
+}
+.sns-area {
+    display: flex;
+    align-items: center;
+}
+.sns-area ul {
+    display: flex;
+    flex-direction: row;
+}
+.sns-area a {
+    text-indent: -9999px;
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* 
+    회원가입 영역
+    일부 css는 위쪽에 스타일과 공용으로 사용
+*/
+
+.signin-img {
+    position: relative;
+    background: url('../img/img_top5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* 회원 가입 폼 */
+.signin-form {
+    display: block;
+    margin-left: 40px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.input-form {
+    margin-top: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid gray;
+    text-align: left;
+}
+.input-form > li {
+    min-height: 60px;
+    margin-top: 10px;
+}
+
+#email_front, #email_rear
+    {height: 45px; width: 160px; font-size: 1rem;}
+#email_domain {height: 45px; width: 200px; font-size: 1rem;}
+#user, #pwd, #pwd-check, #contacts
+    {height: 45px; width: 700px; font-size: 1rem;}
+#male, #female, #agree
+    {width: 30px; font-size: 1rem;}
+#qna 
+    {height: 200px; width: 700px;}
+
+#left-align {
+    position: relative;
+    left: 200px;
+}
+
+#submit {
+    position: relative;
+    margin-top: 15px;
+    background-color: rgb(27, 39, 77);
+    border: 1px solid rgb(27, 39, 77);
+    height: 50px;
+    width: 150px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+
+
+/* 로그인 정보 -비매품- */
+.login-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 20px;
+    padding: 40px;
+}
+.login-align li {
+    text-align: center;
+    align-items: center;
+    min-height: 40px;
+}
+.login-btn {
+    background-color: rgb(49, 48, 48);
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+}

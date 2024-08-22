@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인|투어리스트인투어</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="bg_container">
+        <header id="header">
+            <div id="logo"> 
+                <h1><a href="index.html" style="opacity: 0;">TOURIST IN TOUR</a></h1>
+            </div>
+            <div class="menu-top">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li>|</li>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="#">여행정보</a>
+                        <ul class="menu-sub">
+                            <li><a href="#">국내</a></li>
+                            <li><a href="#">해외</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="menu-sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">상품투어</a>
+                        <ul class="menu-sub">
+                            <li><a href="#">프로그램소개</a></li>
+                            <li><a href="#">여행자료</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">티켓/가이드</a>
+                        <ul class="menu-sub">
+                            <li><a href="#">항공</a></li>
+                            <li><a href="#">호텔</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+    <div>
+        <form action="#" class="login-form">
+            <fieldset style="border: 0px solid black;"></fieldset>
+            <ul class="login-align">
+                <li>
+                    <label style="width: 200px; margin-right: 50px;">아이디</label>
+                    <input type="text" name="id" value="" placeholder="아이디를 넣어 주세요" width="400px">
+                </li>
+                <li>
+                    <label style="width: 200px; margin-right: 45px;">패스워드</label>
+                    <input type="password" name="pwd" value="" placeholder="비밀번호를 넣어 주세요" width="400px">
+                </li>
+                <li><button class="login-btn" type="button" onclick="onsubmit();">로그인</button></li>
+            </ul>
+            
+
+        </form>
+    </div>
+    
+    <script src="js/script.js"></script>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="left-area">
+                <div class="menu-footer">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li>|</li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <p>투어리스트인투어</p>
+                    <p>서울특별시 종로구 혜화동 9길 청운빌딩 5층 <span>/</span>
+                        대표전화&nbsp;02-1234-5678<span>/</span>
+                        E-mail : titour@touristintour.com
+                    </p>
+                    <p>Copyright(c) TouristInTour all right reserved</p>
+                </div>
+            </div>
+            <div class="sns-area">
+                <ul>
+                    <li><a href="https://blog.naver.com" style="background-image: url('images/ico_blog_r.png');">blog</a></li>
+                    <li><a href="https://www.facebook.com" style="background-image: url('images/ico_facebook_r.png');">facebook</a></li>
+                    <li><a href="http://www.instargram.com" style="background-image: url('images/ico_instargram_r.png');">instargram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

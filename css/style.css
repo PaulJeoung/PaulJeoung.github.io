@@ -25,12 +25,12 @@ li {
     height: 120px;
     background-color: rgba(31, 31, 31, 0.8);
 }
-.bg_container {
-    background: url("../images/mainslide01.jpg");
+#bg_container {
+    /* background: url("../images/mainslide01.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    z-index: 10;
+    z-index: 9999;
 }
 #logo {
     background: url("../images/logo.png");
@@ -282,3 +282,24 @@ li {
     color: white;
 }
 
+/* 로그인 정보 */
+.login-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 20px;
+    padding: 40px;
+}
+.login-align li {
+    text-align: center;
+    align-items: center;
+    min-height: 40px;
+}
+.login-btn {
+    background-color: rgb(49, 48, 48);
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+}

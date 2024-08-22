@@ -4,28 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입|투어리스트인투어</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="bg_container">
+    <div id="bg_container">
         <header id="header">
-            <div id="logo">
+            <div id="logo"> 
                 <h1><a href="index.html" style="opacity: 0;">TOURIST IN TOUR</a></h1>
             </div>
             <div class="menu-top">
                 <ul>
-                    <li><a href="index.html">로그인</a></li>
+                    <li><a href="login.html">로그인</a></li>
                     <li>|</li>
                     <li><a href="join.html">회원가입</a></li>
                 </ul>
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="#">여행정보</a></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">상품투어</a></li>
-                    <li><a href="#">티켓/가이드</a></li>
+                    <li><a href="#">여행정보</a>
+                        <ul class="menu-sub">
+                            <li><a href="#">국내</a></li>
+                            <li><a href="#">해외</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="menu-sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">상품투어</a>
+                        <ul class="menu-sub">
+                            <li><a href="#">프로그램소개</a></li>
+                            <li><a href="#">여행자료</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">티켓/가이드</a>
+                        <ul class="menu-sub">
+                            <li><a href="#">항공</a></li>
+                            <li><a href="#">호텔</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -66,13 +86,13 @@
                 <li>
                     <span><span style="color: red;">*</span> 비밀번호 확인</span>
                     <span class="left-align"><label for="pwd-check"></label>
-                        <input id="pwd-check" type="password" name="pwd-check" value="" placeholder="비밀번호를 다시 입력해 주세요"></span>
+                        <input id="pwd-check" type="password" name="pwd-check" oninput="toggleVaildPwd()" value="" placeholder="비밀번호를 다시 입력해 주세요"></span>
                         <div id="vailPwddMsg"></div>
                 </li>
                 <li>
                     <span><span style="color: red;">*</span> 연락처</span>
                     <span class="left-align"><label for="contacts"></label>
-                        <input id="contacts" type="tel" name="contacts" value="" placeholder='휴대폰 " - " 없이 숫자만 주세요' minlength="9" maxlength="15"></span>
+                        <input id="contacts" type="tel" name="contacts" value="" oninput="toggleVaildContacts()" placeholder='휴대폰 " - " 없이 숫자만 주세요' minlength="9" maxlength="15"></span>
                         <div id="numbersMsg"></div>
                 </li>
                 <li>

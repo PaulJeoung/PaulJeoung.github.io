@@ -76,12 +76,12 @@
                 <li>
                     <span><span style="color: red;">*</span> 작성자명</span>
                     <span class="left-align"><label for="user"></label>
-                        <input id="user" type="text" name="user" value="" placeholder="이름을 입력해 주세요"></span>
+                        <input required id="user" type="text" name="user" value="" placeholder="이름을 입력해 주세요"></span>
                 </li>
                 <li>
                     <span><span style="color: red;">*</span> 비밀번호</span>
                     <span class="left-align"><label for="pwd"></label>
-                        <input id="pwd" type="password" name="pwd" value="" placeholder="비밀번호를 입력해 주세요"></span>
+                        <input required id="pwd" type="password" name="pwd" value="" placeholder="비밀번호를 입력해 주세요"></span>
                 </li>
                 <li>
                     <span><span style="color: red;">*</span> 비밀번호 확인</span>
@@ -92,7 +92,7 @@
                 <li>
                     <span><span style="color: red;">*</span> 연락처</span>
                     <span class="left-align"><label for="contacts"></label>
-                        <input id="contacts" type="tel" name="contacts" value="" oninput="toggleVaildContacts()" placeholder='휴대폰 " - " 없이 숫자만 주세요' minlength="9" maxlength="15"></span>
+                        <input required id="contacts" type="tel" name="contacts" value="" oninput="toggleVaildContacts()" placeholder='휴대폰 " - " 없이 숫자만 주세요' minlength="9" maxlength="15"></span>
                         <div id="numbersMsg"></div>
                 </li>
                 <li>

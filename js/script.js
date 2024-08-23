@@ -13,7 +13,9 @@ const bgContainer = document.querySelector('#bg_container');
 function changeBackground() {
     bgContainer.style.backgroundImage = `url(${images[nowIndex]})`;
     console.log(images[nowIndex]);
-    nowIndex = (nowIndex + 1) % images.length;
+    // nowIndex = (nowIndex + 1) % images.length;
+    nowIndex =  nowIndex++ % images.length;
+    
 }
 
 setInterval(changeBackground, 5000);
@@ -55,13 +57,21 @@ function toggleVaildPwd() {
     const vailPwddMsg = document.getElementById('vailPwddMsg');
     var html = '';
 
-    if (pwd_origin === pwd_re) {
-        console.log('일치');
-        html += '<span style="color: blue; font-size: 0.9rem;">패스워드가 일치 합니다.</span>';
-    } else {
-        console.log('불일치');
-        html += '<span style="color: red; font-size: 0.9rem;">패스워드가 일치하지 않습니다.</span>';
-    }
+    // if (pwd_origin === pwd_re) {
+    //     console.log('일치');
+    //     html += '<span style="color: blue; font-size: 0.9rem;">패스워드가 일치 합니다.</span>';
+    // } else {
+    //     console.log('불일치');
+    //     html += '<span style="color: red; font-size: 0.9rem;">패스워드가 일치하지 않습니다.</span>';
+    // }
+    
+    const testResult = pwd_origin === pwd_re; 
+    const color = testResult ? 'blue' : 'red';
+    const message = testResult ? '일치 합니다' : '일치 하지 않습니다';
+    
+    html = `<span style="color: ${color}; font-size: 0.9rem;">패스워드가 ${message}.</span>`;
+
+    
     vailPwddMsg.innerHTML = html;
 }
 
@@ -106,7 +116,7 @@ function signinForm() {
         var full_email = email_f + '@' + email_d;
     }
     console.log ('이메일 생성이 완료 되었습니다.', full_email);
-
+/*
     if (user === '' || full_email === '' || pwd === '' || contacts === '') {
         alert ("필수항목을 확인해 주세요");
         return false;
@@ -114,4 +124,8 @@ function signinForm() {
         alert ('등록이 완료 되었습니다.\n작성자명 : ' + user + '\n비밀번호 : ' + pwd + '\n이메일 : ' + full_email + '\n연락처 : ' + contacts);
         return true;
     }
+    */
+
+      alert ('등록이 완료 되었습니다.\n작성자명 : ' + user + '\n비밀번호 : ' + pwd + '\n이메일 : ' + full_email + '\n연락처 : ' + contacts);
+        return true;
 }

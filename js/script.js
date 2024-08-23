@@ -13,7 +13,9 @@ const bgContainer = document.querySelector('#bg_container');
 function changeBackground() {
     bgContainer.style.backgroundImage = `url(${images[nowIndex]})`;
     console.log(images[nowIndex]);
-    nowIndex = (nowIndex + 1) % images.length;
+    // nowIndex = (nowIndex + 1) % images.length;
+    nowIndex =  nowIndex++ % images.length;
+    
 }
 
 setInterval(changeBackground, 5000);
@@ -55,13 +57,21 @@ function toggleVaildPwd() {
     const vailPwddMsg = document.getElementById('vailPwddMsg');
     var html = '';
 
-    if (pwd_origin === pwd_re) {
-        console.log('일치');
-        html += '<span style="color: blue; font-size: 0.9rem;">패스워드가 일치 합니다.</span>';
-    } else {
-        console.log('불일치');
-        html += '<span style="color: red; font-size: 0.9rem;">패스워드가 일치하지 않습니다.</span>';
-    }
+    // if (pwd_origin === pwd_re) {
+    //     console.log('일치');
+    //     html += '<span style="color: blue; font-size: 0.9rem;">패스워드가 일치 합니다.</span>';
+    // } else {
+    //     console.log('불일치');
+    //     html += '<span style="color: red; font-size: 0.9rem;">패스워드가 일치하지 않습니다.</span>';
+    // }
+    
+    const testResult = pwd_origin === pwd_re; 
+    const color = testResult ? 'blue' : 'red';
+    const message = testResult ? '일치 합니다' : '일치 하지 않습니다';
+    
+    html = `<span style="color: ${color}; font-size: 0.9rem;">패스워드가 ${message}.</span>`;
+
+    
     vailPwddMsg.innerHTML = html;
 }
 

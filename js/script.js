@@ -116,7 +116,7 @@ function signinForm() {
         var full_email = email_f + '@' + email_d;
     }
     console.log ('이메일 생성이 완료 되었습니다.', full_email);
-
+/*
     if (user === '' || full_email === '' || pwd === '' || contacts === '') {
         alert ("필수항목을 확인해 주세요");
         return false;
@@ -124,4 +124,8 @@ function signinForm() {
         alert ('등록이 완료 되었습니다.\n작성자명 : ' + user + '\n비밀번호 : ' + pwd + '\n이메일 : ' + full_email + '\n연락처 : ' + contacts);
         return true;
     }
+    */
+
+      alert ('등록이 완료 되었습니다.\n작성자명 : ' + user + '\n비밀번호 : ' + pwd + '\n이메일 : ' + full_email + '\n연락처 : ' + contacts);
+        return true;
 }

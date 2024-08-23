@@ -14,7 +14,7 @@ function changeBackground() {
     bgContainer.style.backgroundImage = `url(${images[nowIndex]})`;
     console.log(images[nowIndex]);
     // nowIndex = (nowIndex + 1) % images.length;
-    nowIndex =  nowIndex++ % images.length;
+    nowIndex =  ++nowIndex % images.length;
     
 }
 

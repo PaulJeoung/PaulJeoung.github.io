@@ -1,7 +1,7 @@
-# PaulJeoung.github.io
-PaulJeoung.github.io
+# tourlist-in-tour
+- url link : https://pauljeoung.github.io/tourlist-in-tour/
 
-tour site new create
-- index.html
-- join.html
-- login.html
+## Contents
+1. index.html
+2. join.html
+3. login.html
